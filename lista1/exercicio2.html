@@ -1,0 +1,41 @@
+<! doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<script>
+	function chamaFuncao()
+{
+	var a=document.getElementById("entrada1").value;
+	var b=document.getElementById("entrada2").value;
+
+	a=parseInt (a);
+	b=parseInt (b);
+
+	var resultado=maior (a, b);
+	alert ("O numero maior entre " + a + " e " + b + " é " + resultado);
+}
+function  maior (a, b)
+{
+	if(a > b)
+		return a;
+	else if(a < b)
+		return b;
+	else return 0;
+}
+</script>
+</head>
+<body>
+	<form>
+		<input type="text"
+			id="entrada1"
+			placeholder="Entre com valor">
+		<br/>
+		<input type="text"
+			id="entrada2"
+			placeholder="Entre com valor">
+		<br/>
+		<br/>
+		<button onclick="chamaFuncao();">Executar</button>
+	</form>
+</body>
+</html>

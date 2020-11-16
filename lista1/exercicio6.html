@@ -1,0 +1,35 @@
+<! doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<script>
+	function chamaFuncao()
+{
+	var a=document.getElementById("entrada1").value;
+	
+	a=parseInt (a);
+	
+	var resultado=custo (a);
+	alert ("O valor do carro " + " é " + resultado);
+}
+function  custo (a)
+{
+	var i, j, k;
+	i= (a*0,28)+a;
+	j= (a*0,45)+a;
+	k= a+i+j;
+	return k;	
+}
+</script>
+</head>
+<body>
+	<form>
+		<input type="text"
+			id="entrada1"
+			placeholder="Entre com valor">
+		<br/>
+		<br/>
+		<button onclick="chamaFuncao();">Executar</button>
+	</form>
+</body>
+</html>

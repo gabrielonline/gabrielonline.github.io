@@ -1,0 +1,33 @@
+<! doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<script>
+	function chamaFuncao()
+{
+	var f=document.getElementById("entrada1").value;
+	
+	f=parseInt (f);
+	
+	var resultado=transforma (f);
+	alert ("O valor em graus celsius " + " é " + resultado);
+}
+function  transforma (f)
+{
+	var c;
+	c= 5*(f-32)/9;
+	return c;
+}
+</script>
+</head>
+<body>
+	<form>
+		<input type="text"
+			id="entrada1"
+			placeholder="Graus Fahrenheit">
+		<br/>
+		<br/>
+		<button onclick="chamaFuncao();">Executar</button>
+	</form>
+</body>
+</html>
