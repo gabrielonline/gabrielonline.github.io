@@ -1,0 +1,42 @@
+<! doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<script>
+	function chamaFuncao()
+{
+	var m=document.getElementById("entrada1").value;
+	
+	m=parseInt (m);
+	
+	var resultado=maça (m);
+	alert ("O preço das  maças " + " é " + resultado);
+}
+function  maça (f)
+{
+	var c;
+	if (f<12)
+	{
+		c= f*1.30;
+	}
+	else if(f>=12)
+	{
+		c= f*1;
+	}
+	return c;
+
+}
+</script>
+</head>
+<body>
+	<h1>10 - As maçãs custam R$ 1,30 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem compradas pelo menos 12. Escreva um programa que leia o número de maçãs compradas, calcule e escreva o custo total da compra. Calcular o valor das maçãs:</h1>
+	<form>
+		<input type="text"
+			id="entrada1"
+			placeholder="quantas maças">
+		<br/>
+		<br/>
+		<button onclick="chamaFuncao();">Executar</button>
+	</form>
+</body>
+</html>

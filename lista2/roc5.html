@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>JavaScript</title>
+ </head>
+<body>
+
+	<h1>5 - Dado o seguinte vetor de objetos: var usuarios = [ { nome: "Diego", habilidades: ["Javascript", "ReactJS", "Redux"] }, { nome: "Gabriel", habilidades: ["VueJS", "Ruby on Rails", "Elixir"] } ];
+Escreva uma função que produza o seguinte resultado: O Diego possui as habilidades: Javascript, ReactJS, Redux. O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir.</h1>
+<br>
+	<script>
+		var usuarios = [
+		    {
+		      nome: 'Diego',
+		      habilidades: ['Javascript', 'ReactJS', 'Redux']
+		    },
+			    {
+			      nome: 'Gabriel',
+			      habilidades: ['VueJS', 'Ruby on Rails', 'Elixir']
+			    }
+			]
+
+					for (let usuario of usuarios)
+					{
+					    console.log('O ' + usuario.nome + ' possui as habilidades: ' + usuario.habilidades.join(", "));
+					}
+	</script>
+</body>
+</html>

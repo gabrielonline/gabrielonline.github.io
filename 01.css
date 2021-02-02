@@ -1,0 +1,20 @@
+#acervo img{
+    width: 15px;
+    height: 15px;
+}
+legend{
+	font-family: arial;
+	font-size: 20px;
+}
+h1{
+	font-family: arial;
+	font-size: 20px;
+}
+h2{
+	font-size: 10px;
+	font-family: arial;
+}
+th{
+			font-family: arial;
+		padding: 30px;
+}

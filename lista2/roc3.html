@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>JavaScript</title>
+ </head>
+<body>
+	<h1>3 - Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript" e retorna um booleano true/false caso exista ou não.
+var skills = ["Javascript", "ReactJS", "React Native"];</h1>
+<br>
+	<script>
+		function Habilidade(skill)
+		{
+            if(skill == 'javascript')
+            {
+                console.log('Você sabe javascript');
+            } 
+	            else if(skill == 'reactjs')
+	            {
+	                console.log('Você sabe reactjs');
+	            } 
+		            else if(skill == 'React native')
+		            {
+		                console.log('Você sabe React native');
+		            } 
+			            else
+			            {
+			                console.log('Você não sabe nenhuma das linguagens');
+			            }
+        }
+
+        var resultado = Habilidade('javascript');
+        var skill = ['javascript', 'reactjs', 'React native'];
+	</script>
+</body>
+</html>

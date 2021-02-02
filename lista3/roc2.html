@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf8">
+<link rel="stylesheet" href="../../css/estilo.css">
+<script>
+	function quadrado()
+{
+	var quadrados = document.createElement('div');
+	quadrados.style.width = '100px';
+	quadrados.style.height = '100px';
+	quadrados.style.backgroundColor = '#FF0000';
+	quadrados.style.marginBottom = '1px'
+	quadrados.style.display = 'inline-block';
+	var resultado = document.getElementById('teste');
+	resultado.appendChild(quadrados);
+}
+	function quadradoColorido()
+{
+	var quadrados = document.createElement('div');
+	quadrados.style.width = '100px';
+	quadrados.style.height = '100px';
+	quadrados.style.backgroundColor = '#FF0000';
+	quadrados.style.marginBottom = '1px'
+	quadrados.style.display = 'inline-block';
+	var resultado = document.getElementById('teste');
+	quadrados.onmouseover = function() {
+        quadrados.style.backgroundColor = getRandomColor();
+      } // Mudando o background
+	resultado.appendChild(quadrados);
+}
+function getRandomColor() {
+	var letters = '0123456789ABCDEF';
+	var color = '#';
+	for (var i = 0; i < 6; i++) {
+	  color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
+}
+</script>
+</head>
+<body>
+
+<h1>2 - Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de algum quadrado troque sua cor para uma cor aleatória.</h1>
+<button onclick="quadradoColorido();">Criar Quadrados</button>	
+<br>
+<div id= 'teste'>
+
+</div>
+	<footer>
+		<a class="retorno" href="abaprincipal.html">Voltar</a>
+	</footer>
+</body>
+</html>
