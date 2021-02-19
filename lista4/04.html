@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gabriel Corrêa dos Santos</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        
+        $(function () {
+            $("#botao4").click(function () {
+                let texto4 = $("#frase4").val();
+                qtd4 = texto4.length;
+                let array = new Array();
+                let j = 0;
+
+                for (let i = 0; i < qtd4; i++) {
+                    if (texto4[i] == " ") {
+                        j++;
+                    }
+                    else if (array[j] == undefined) {
+                        array[j] = texto4[i];
+                    }
+                    else {
+                        array[j] = array[j] + texto4[i];
+                    }
+                }
+
+
+                let qtd41 = array.length;
+                let cont = 0;
+                let contagem = new Array();
+                for (let k = 0; k < qtd41; k++) {
+                    cont = 0;
+                    for (let l = 0; l < qtd41; l++) {
+                        if (array[k] == array[l]) {
+                            cont++;
+                        }
+                    }
+                    contagem[k] = cont;
+
+                }
+                let qtdcont = contagem.length;
+                let maiorPalavra = 0;
+                for (let m = 0; m < qtdcont; m++) {
+                    if (contagem[maiorPalavra] < contagem[m]) {
+                        maiorPalavra = m;
+                    }
+                }
+                $("#fras4").text("Palavra com maior ocorrência: " + array[maiorPalavra]);
+                $("#fras41").text("Ocorrência: " + contagem[maiorPalavra] + " vezes.");;
+
+            })
+        });
+    </script>
+
+<body>
+
+    
+    <div id="exer4">
+        <h2>Faça um programa que leia um texto e indique a palavra de maior ocorrência e quantas vezes ela apareceu no texto:</h2>
+        <input type="text" id="frase4" placeholder="Escreva um texto">
+        <input type="submit" id="botao4" placeholder="Enviar">
+        <p id="fras4"></p>
+        <p id="fras41"></p>
+    </div>
+</body>
+
+</html>

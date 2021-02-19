@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gabriel Corrêa dos Santos</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        
+        $(function () {
+            $("#botao3").click(function () {
+                let texto3 = $("#frase3").val();
+                qtd3 = texto3.length;
+                let array = new Array();
+                let j = 0;
+
+                for (let i = 0; i < qtd3; i++) {
+                    if (texto3[i] == " ") {
+                        j++;
+                    }
+                    else if (array[j] == undefined) {
+                        array[j] = texto3[i];
+                    }
+                    else {
+                        array[j] = array[j] + texto3[i];
+                    }
+                }
+
+                console.log(array);
+
+                let qtd31 = array.length;
+                let cont = 0;
+                let contagem = new Array();
+                for (let k = 0; k < qtd31; k++) {
+                    cont = 0;
+                    for (let l = 0; l < qtd31; l++) {
+                        if (array[k] == array[l]) {
+                            cont++;
+                        }
+                    }
+                    contagem[k] = cont;
+
+                }
+
+                $("#tabela")
+                    .append(
+                        $("<th>")
+                            .text("Palavras")
+                    )
+                    .append(
+                        $("<th>")
+                            .text("Ocorrências")
+                    )
+
+
+                for (var m = 0; m < qtd31; m++) {
+                    $("#tabela")
+                        .append(
+                            $("<tr>")
+                                .append(
+                                    $("<td>")
+                                        .text(array[m])
+                                )
+                                .append(
+                                    $("<td>")
+                                        .text(contagem[m])
+                                )
+                        );
+                }
+
+            })
+        });
+
+        
+    </script>
+
+<body>
+
+    <div id="exer3">
+        <h2>Faça um programa que leia um texto e separe todas as palavras em um array, indicado para cada uma delas o número de vezes que aparece no texto. Imprima o array em uma tabela contendo a palavra e número de ocorrências:</h2>
+        <input type="text" id="frase3" placeholder="Escreva um texto">
+        <input type="submit" id="botao3" placeholder="Enviar">
+        <table id="tabela"></table>
+    </div>
+   
+</body>
+
+</html>
