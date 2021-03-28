@@ -1,0 +1,235 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gabriel Santos</title>
+	<meta name="keywords" content="Estudante">
+	<meta name="description" content="">
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+	<link href="./default.css" rel="stylesheet" type="text/css" media="all">
+	<link href="./fonts.css" rel="stylesheet" type="text/css" media="all">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+
+jQuery("#subirTopo").hide();
+
+jQuery('a#subirTopo').click(function () {
+         jQuery('body,html').animate({
+           scrollTop: 0
+         }, 800);
+        return false;
+   });
+
+jQuery(window).scroll(function () {
+         if (jQuery(this).scrollTop() > 100) {
+            jQuery('#subirTopo').fadeIn();
+         } else {
+            jQuery('#subirTopo').fadeOut();
+         }
+     });
+});
+function quest1() {
+                var option = $('#selectOption1').find(":selected").text();
+                console.log(option);
+                if(option == "D"){
+                    document.getElementById("txt1").innerHTML = "Alternativa correta. Parabéns, Eisnten!!!";
+                }
+                else{
+                    document.getElementById("txt1").innerHTML = "Alternativa incorreta";
+                }
+
+            }
+
+    function quest2()
+    {
+            var option = $('#selectOption2').find(":selected").text();
+            if(option == "E"){
+                    document.getElementById("txt2").innerHTML = "Alternativa correta. Parece que temos um gênio por aqui";
+                }
+                else{
+                    document.getElementById("txt2").innerHTML = "Alternativa incorreta";
+                }
+
+    }
+
+    function quest3()
+    {
+            var option = $('#selectOption3').find(":selected").text();
+            if(option == "B"){
+                    document.getElementById("txt3").innerHTML = "Alternativa correta. Muito bem!!!";
+                }
+                else{
+                    document.getElementById("txt3").innerHTML = "Alternativa incorreta";
+                }
+
+    }
+
+    function res1(){
+        alert("Resposta correta: Alternativa D  \n\n Um gás real aproxima-se do ideal quanto mais alta for sua temperatura e menor sua pressão.");		
+    }
+
+    function res2(){
+        alert("Resposta correta: Alternativa E.\n\n A transformação isovolumétrica, também chamada de isocórica, ocorre com volume constante. Como a pressão é diretamente proporcional à temperatura, podemos afirmar que ela também foi quadruplicada.");
+    }
+
+    function res3(){
+        alert("Resposta correta: \n Alternativa B. \n\n As variáveis de estado são três: volume, temperatura e pressão.\nVolume: é o volume do recipiente que o contém.\nTemperatura: é a responsável por medir o estado de agitação molecular.\nPressão: a pressão é ocasionada pelo choque que ocorre em suas partículas contra as paredes do recipiente que o contém. ");
+    }
+</script>
+      <style>
+      #subirTopo {
+text-decoration: none;
+background: #e25e03;
+bottom: 30px;
+right: 30px;
+color: #fff;
+text-align: center;
+cursor: pointer;
+padding: 5px;
+font-size: 15px;
+font-weight: bold;
+text-transform: uppercase;
+position: fixed;
+border: 0;
+font-family: sans-serif;
+opacity: .8;
+}
+
+#subirTopo:hover {
+opacity:1;
+}
+
+     
+
+    </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" media="all"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" media="all"><style data-styled="" data-styled-version="4.4.1"></style></head>
+<body>
+<div id="page" class="container">
+	<header id="header">
+		<div id="logo">
+			<img src="gabriel.jpg" alt="Gabriel Corrêa dos Santos">
+			<h1><a href="#"> Gabriel Santos</a></h1>
+			<span>CEFET/RJ <a href="http://www.cefet-rj.br/index.php/bacharelado-sistemas-informacao-nova-friburgo" rel="nofollow">Nova Friburgo <br>
+				<br>
+				
+				
+			</a></span>
+		</div>
+		<nav id="menu">
+			<ul>
+				<li class="current_page_item"><a href="index.html" accesskey="1" title="">Início</a></li>
+				<li><a href="química.html" accesskey="2" title="Química">Química</a></li>
+				<li><a href="simulacoes.html" accesskey="2" title="Química">1° Trimestre</a></li>
+				<li><a href="currículo.html" accesskey="2" title="currículo">Currículo</a></li>
+
+			</ul>
+		</nav>
+
+		
+	</header>
+	<main id="main">
+		<h2> Exercícios </h2>
+		<nav id="menu2">
+			<ul>
+				
+				
+				
+				
+				
+			</ul>
+		</nav>
+		
+		<h1> </h1>
+															<b>Questão 1 -</b> (F.M. Itajubá - MG)
+								
+															O comportamento de um gás real aproxima-se do de um gás ideal quando:
+														<br><b> <br>
+															A) submetido a baixas temperaturas.
+														<br>
+															B) submetido a baixas temperaturas e baixas pressões.
+														<br>
+															C) submetido a altas temperaturas e altas pressões.
+														<br>
+															D) submetido a altas temperaturas e baixas pressões.
+														<br>
+															D) submetido a baixas temperaturas e altas pressões.
+														<br> </b>
+														<br>
+																Selecione uma das alternativas abaixo: 
+
+																<select id="selectOption1">
+																	<option value="a">A</option>
+																	<option value="b">B</option>
+																	<option value="c">C</option>
+																	<option value="d">D</option>
+																	<option value="e">E</option>
+																</select><br>
+																<br>
+																<button onclick="quest1();">Verificar</button>
+																<button onclick="res1();">Alternativa correta</button>
+														<br>
+															<p id=txt1> </p>
+														<br>
+														<b>Questão 2 -</b> Em uma transformação isovolumétrica, a temperatura final do processo é o quádruplo da temperatura inicial. Sendo assim, determine a relação entre a pressão final e inicial.<br><b> <br>
+																A) A pressão final será quatro vezes menor.
+																<br>
+																B) Não haverá variação de pressão, uma vez que a transformação é isocórica.
+																<br>
+																C) A pressão final será o quádruplo da pressão inicial.
+																<br>
+																D) A pressão final e a inicial serão iguais.
+																<br>
+																E) A pressão final é o dobro da pressão inicial.
+																</b><br> 
+																<br>
+														Selecione uma das alternativas abaixo: 
+																<select id="selectOption2">
+																	<option value="a">A</option>
+																	<option value="b">B</option>
+																	<option value="c">C</option>
+																	<option value="d">D</option>
+																	<option value="e">E</option>
+																</select><br>
+																<br>
+																<button onclick="quest2();">Verificar</button>
+																<button onclick="res2();">Alternativa correta</button>
+														
+														<br>
+															<p id=txt2> </p>
+														<br>
+																<b>Questão 3 -</b> O estado de um gás perfeito é caracterizado por quais variáveis de estado? 
+																<br><b> <br>
+																A) Rio de Janeiro e Goiás.
+																<br>
+																B) Volume, temperatura e pressão.
+																<br>
+																C) Graus e radianos.
+																<br>
+																D) Sólido, líquido e gasoso.
+																<br>
+																E) Nenhuma das alternativas
+																</b><br> 
+																<br>
+																Selecione uma das alternativas abaixo: : 
+																<select id="selectOption3">
+																	<option value="a">A</option>
+																	<option value="b">B</option>
+																	<option value="c">C</option>
+																	<option value="d">D</option>
+																	<option value="e">E</option>
+																</select><br>
+																<br>
+																<button onclick="quest3();">Verificar</button>
+																<button onclick="res3();">Alternativa correta</button>
+																		
+		<a id="subirTopo">
+        ^ <br> subir
+    </a>
+		
+	</main>
+</div>
+
+
+</body><div class="notranslate" style="position: absolute; top: 0; right:0;" id="vd-root-d19608294"></div></html>
+</body>
+</html>
